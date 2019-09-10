@@ -5,6 +5,6 @@ def uppercase(str):
         if 97 <= char <= 122:
             char = char - 32
         if i == len(str) - 1:
-            print(chr(char))
+            print("{:c}".format(char))
         else:
-            print(chr(char), end = '')
+            print("{:c}".format(char), end='')
