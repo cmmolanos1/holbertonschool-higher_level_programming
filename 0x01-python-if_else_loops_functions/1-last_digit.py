@@ -6,9 +6,9 @@ if number < 0:
 else:
     lastDigit = number % 10
 print("Last digit of {} is {}".format(number, lastDigit), end='')
-if l_digit > 5:
+if lastDigit > 5:
     print(" and is greater than 5")
-elif l_digit == 0:
+elif lastDigit == 0:
     print(" and is 0")
 else:
     print(" and is less than 6 and not 0")
