@@ -1,6 +1,7 @@
 #include <Python.h>
 #include <object.h>
 #include <listobject.h>
+#include <stdio.h>
 /**
  * print_python_list_info - prints some info about list
  * @p: pointer to PyObject struct
