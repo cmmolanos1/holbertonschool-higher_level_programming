@@ -1,11 +1,16 @@
 #!/usr/bin/python3
 def matrix_divided(matrix, div):
+    s = 'matrix must be a matrix (list of lists) of\
+ integers/floats'
+    if not matrix or type(matrix) is not list:
+        raise TypeError(s)
     for row in matrix:
-        for ele in row:
-            if type(ele) is not int and type(ele) is not float:
-                s = 'matrix must be a matrix (list of lists) of\
-                integers/floats'
-                raise TypeError(s)
+        if type(row) is list and row:
+            for ele in row:
+                if type(ele) is not int and type(ele) is not float:
+                    raise TypeError(s)
+        else:
+            raise TypeError(s)
 
     row_size = len(matrix[0])
     for row in matrix:
