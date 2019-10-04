@@ -4,16 +4,19 @@ def text_indentation(text):
         raise TypeError('text must be a string')
 
     t = list(text)
-
-    for i in range(len(t)):
+    i = 0
+    l = len(t)
+    while i < l:
         if t[i] == '.' or t[i] == '?' or t[i] == ':':
             if i + 1 != len(t):
                 if t[i + 1] == '.' or t[i + 1] == '?' or t[i + 1] == ':':
                     t.insert(i + 1, '\n\n')
+                    l += 1
                 else:
                     t[i + 1] = '\n\n'
             else:
                 t.insert(i + 1, '\n\n')
-
+                l += 1
+        i += 1
     text2 = "".join(t)
     print(text2, end='')
