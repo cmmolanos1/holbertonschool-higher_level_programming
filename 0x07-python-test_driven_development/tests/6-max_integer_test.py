@@ -6,7 +6,9 @@ max_integer = __import__('6-max_integer').max_integer
 
 
 class TestMaxInteger(unittest.TestCase):
-    """ Class to verify all edge cases in this function"""
+    """ Class to verify all edge cases in this function
+
+    """
     def test_documentation(self):
         self.assertTrue(len(__import__("6-max_integer").__doc__) > 0)
 
@@ -19,8 +21,7 @@ class TestMaxInteger(unittest.TestCase):
 
     def max_at_the_end(self):
         """ Biggest between positive number"""
-        a = [5, 100, 2, 1000]
-        self.assertEqual(max_integer(a), 1000)
+        self.assertEqual(max_integer([5, 100, 2, 1000]), 1000)
 
     def both_posneg(self):
         """ Test mixing negatives and positives numbers"""
