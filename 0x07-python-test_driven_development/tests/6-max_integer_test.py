@@ -22,7 +22,7 @@ class TestMaxInteger(unittest.TestCase):
         a = [-5, -100, -2, -1000]
         self.assertEqual(max_integer(a), -2)
 
-    def positives(self):
+    def max_at_the_end(self):
         """ Biggest between positive number"""
         a = [5, 100, 2, 1000]
         self.assertEqual(max_integer(a), 1000)
