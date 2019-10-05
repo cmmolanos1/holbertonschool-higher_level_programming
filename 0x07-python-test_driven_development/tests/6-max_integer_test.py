@@ -33,11 +33,9 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_none_and_zero(self):
         """Testing empties and zeros"""
-        pr = []
-        self.assertEqual(max_integer(pr), None)
+        self.assertEqual(max_integer([]), None)
 
-        pr = [0, 0, 0, 0]
-        self.assertEqual(max_integer(pr), 0)
+        self.assertEqual(max_integer([0, 0, 0, 0]), 0)
 
         self.assertEqual(max_integer(), None)
 
