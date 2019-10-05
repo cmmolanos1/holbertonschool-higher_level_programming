@@ -82,3 +82,6 @@ Now Use it
 
     >>> add_integer(-1)
     97
+    >>> add_integer(5, float("nan"))
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
