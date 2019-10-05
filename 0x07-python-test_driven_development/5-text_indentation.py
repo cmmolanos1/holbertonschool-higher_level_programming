@@ -21,5 +21,16 @@ def text_indentation(text):
                 t.insert(i + 1, '\n\n')
                 l += 1
         i += 1
+
+    j = 0
+
+    while j < l:
+        if j + 1 != len(t):
+            if t[j] == '\n\n' and t[j + 1] == ' ':
+                t.pop(j + 1)
+                l -= 1
+                continue
+        j += 1
+
     text2 = "".join(t)
     print(text2, end='')
