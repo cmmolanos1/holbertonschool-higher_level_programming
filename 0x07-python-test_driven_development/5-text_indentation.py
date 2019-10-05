@@ -12,6 +12,9 @@ def text_indentation(text):
                 if t[i + 1] == '.' or t[i + 1] == '?' or t[i + 1] == ':':
                     t.insert(i + 1, '\n\n')
                     l += 1
+                elif t[i + 1] != ' ':
+                    t.insert(i + 1, '\n\n')
+                    l += 1
                 else:
                     t[i + 1] = '\n\n'
             else:
