@@ -7,15 +7,10 @@ max_integer = __import__('6-max_integer').max_integer
 
 class TestMaxInteger(unittest.TestCase):
     """ Class to verify all edge cases in this function"""
-    def test_module_docstring(self):
-        """Tests for module docsting"""
-        m = __import__('6-max_integer').__doc__
-        self.assertTrue(len(m) > 1)
+    def test_documentation(self):
+        self.assertTrue(len(__import__("6-max_integer").__doc__) > 0)
 
-    def test_function_docstring(self):
-        """Tests for funstion docstring"""
-        f = max_integer.__doc__
-        self.assertTrue(len(f) > 1)
+        self.assertTrue(len(max_integer.__doc__) > 0)
 
     def negatives(self):
         """ Biggest between negatives number"""
