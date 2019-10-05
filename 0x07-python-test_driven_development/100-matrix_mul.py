@@ -1,6 +1,11 @@
 #!/usr/bin/python3
-def matrix_mul(m_a, m_b):
+"""
+Matrix_mul
+"""
 
+
+def matrix_mul(m_a, m_b):
+    """Dot multiply 2 matrices"""
     if type(m_a) is not list:
         raise TypeError('m_a must be a list')
     if type(m_b) is not list:

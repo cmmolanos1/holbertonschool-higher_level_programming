@@ -9,6 +9,16 @@
 Importing function from the module:
     >>> matrix_mul = __import__('100-matrix_mul').matrix_mul
 
+Checking for module docstring:
+    >>> m = __import__("100-matrix_mul").__doc__
+    >>> len(m) > 1
+    True
+
+Checking for function docstring:
+    >>> f = __import__("100-matrix_mul").matrix_mul.__doc__
+    >>> len(f) > 1
+    True
+
 Now Use it
 
     >>> matrix_mul(1, [1])
