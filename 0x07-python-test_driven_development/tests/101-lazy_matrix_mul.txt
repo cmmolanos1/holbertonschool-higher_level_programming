@@ -20,7 +20,9 @@ Now Use it
     ...
     TypeError: m_b must be a list
     >>> lazy_matrix_mul([[1, 2], [4, 5], [7, 8]], [[1, 2, 3], [0, 5, 2]])
-    [[1, 12, 7], [4, 33, 22], [7, 54, 37]]
+    [[1, 12, 7],
+     [4, 33, 22],
+     [7, 54, 37]]
     >>> lazy_matrix_mul([[1, 2], "abc", [7, 8]], [[1, 2, 3], [0, 5, 2]])
     Traceback (most recent call last):
     ...
@@ -34,14 +36,6 @@ Now Use it
     ...
     ValueError: m_a can't be empty
     >>> lazy_matrix_mul([[1, 2], [3, 4]], [])    
-    Traceback (most recent call last):
-    ...
-    ValueError: m_b can't be empty
-    >>> lazy_matrix_mul([[]], [[1, 2], [3, 4]])    
-    Traceback (most recent call last):
-    ...
-    ValueError: m_a can't be empty
-    >>> lazy_matrix_mul([[1, 2], [3, 4]], [[]])    
     Traceback (most recent call last):
     ...
     ValueError: m_b can't be empty
