@@ -14,60 +14,9 @@ class TestMaxInteger(unittest.TestCase):
 
         self.assertTrue(len(max_integer.__doc__) > 0)
 
-    def negatives(self):
-        """ Biggest between negatives number"""
-        a = [-5, -100, -2, -1000]
-        self.assertEqual(max_integer(a), -2)
-
     def max_at_the_end(self):
         """ Biggest between positive number"""
-        self.assertEqual(max_integer([5, 100, 2, 1000]), 1000)
-
-    def both_posneg(self):
-        """ Test mixing negatives and positives numbers"""
-        a = [-2, -1, 0, 1, 2]
-        self.assertEqual(max_integer(a), 2)
-
-    def one_float(self):
-        """ If one element is float"""
-        a = [1, 2, 3.3, 4]
-        self.assertEqual(max_integer(a), 4)
-
-    def all_float(self):
-        """ Teste when all elements are float"""
-        a = [1.1, 2.2, 3.3, 4.4]
-        self.assertEqual(max_integer(a), 4.4)
-
-    def all_same(self):
-        """ Test when all elements are the same number"""
-        a = [0, 0, 0, 0]
-        self.assertEqual(max_integer(a), 0)
-
-    def uniq_element(self):
-        """ Test when there is only 1 element"""
-        a = [0]
-        self.assertEqual(max_integer(a), 0)
-
-    def empty_list(self):
-        """ Test if we input empty lists"""
-        a = []
-        self.assertIsNone(max_integer(a))
-
-    def type_error(self):
-        """ When is typed a non-float-int number"""
-        a = [1, 2, "three", 4]
-        with self.assertRaises(TypeError):
-            max_integer(a)
-
-    def none_case(self):
-        """ None as argument"""
-        with self.assertRaises(TypeError):
-            max_integer(None)
-
-    def int_case(self):
-        """ int as argument"""
-        with self.assertRaises(TypeError):
-            max_integer(0)
+        self.assertEqual(max_integer([1, 2, 3, 4, 5]), 5)
 
 if __name__ == '__main__':
     unittest.main()
