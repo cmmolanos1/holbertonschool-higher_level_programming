@@ -14,34 +14,25 @@ class TestMaxInteger(unittest.TestCase):
 
         self.assertTrue(len(max_integer.__doc__) > 0)
 
-    def test_positives(self):
-        """Testing positive numbers"""
+    def test_int(self):
+        """Testing int numbers"""
 
-        pr = [1, 2, 3, 6]
-        self.assertEqual(max_integer(pr), 6)
+        self.assertEqual(max_integer([1, 2, 3, 4]), 4)
 
-        pr = [1, 2, 6, 3]
-        self.assertEqual(max_integer(pr), 6)
+        self.assertEqual(max_integer([4, 1, 2, 3]), 4)
 
-        pr = [4, 4, 4, 4]
-        self.assertEqual(max_integer(pr), 4)
+        self.assertEqual(max_integer([1, 2, 4, 3]), 4)
 
-        pr = [1, 2, 6, 6]
-        self.assertEqual(max_integer(pr), 6)
+        self.assertEqual(max_integer([-1, 2, 4, 3]), 4)
 
-        pr = [1.1, 2.2, 3.3, 4.4]
-        self.assertEqual(max_integer(pr), 4.4)
+        self.assertEqual(max_integer([1]), 1)
 
     def test_negatives(self):
-
-        pr = [-2, 0, 2, 4]
-        self.assertEqual(max_integer(pr), 4)
-
-        pr = [-7, -6, -5, -4]
-        self.assertEqual(max_integer(pr), -4)
+        """ Testing negative numbers"""
+        self.assertEqual(max_integer([-1, -2, -3, -4]), -1)
 
     def test_none_and_zero(self):
-
+        """Testing empties and zeros"""
         pr = []
         self.assertEqual(max_integer(pr), None)
 
@@ -52,15 +43,8 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_not_list(self):
 
-        pr = [1, 2, "mao", 4]
+        pr = [1, 2, "three", 4]
         self.assertRaises(TypeError)
-
-        pr = [1, 2, [1, 2, 3], 4]
-        self.assertRaises(TypeError)
-
-        pr = [1, 2, (1, 2, 3), 4]
-        self.assertRaises(TypeError)
-
 
 if __name__ == '__main__':
     unittest.main()
