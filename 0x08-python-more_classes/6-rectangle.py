@@ -1,13 +1,17 @@
 #!/usr/bin/python3
-"""Creating an empty Class"""
+"""Creating a class Rectangle"""
 
 
 class Rectangle:
     """Print a rectangle"""
+
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """Initialize the object"""
         self.width = width
         self.height = height
+        type(self).number_of_instances += 1
 
     @property
     def width(self):
@@ -65,4 +69,5 @@ class Rectangle:
 
     def __del__(self):
         """Destroy the object"""
+        type(self).number_of_instances -= 1
         print("Bye rectangle...")
