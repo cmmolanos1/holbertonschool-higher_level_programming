@@ -32,7 +32,7 @@ class Rectangle:
         """Make height private"""
         return self.__height
 
-    @width.setter
+    @height.setter
     def height(self, value):
         """Handle height errors"""
         if type(value) is not int:
