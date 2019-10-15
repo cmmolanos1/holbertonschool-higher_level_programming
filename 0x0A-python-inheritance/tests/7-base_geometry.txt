@@ -1,0 +1,64 @@
+The ``7-base_geometry`` module
+======================
+
+Using ``BaseGeometry``
+-------------------
+
+Importing the function from the module:
+        >>> BG = __import__("7-base_geometry").BaseGeometry
+
+Now use it
+    >>> a = __import__("7-base_geometry").__doc__
+    >>> len(a) > 1
+    True
+
+    >>> b = __import__("7-base_geometry").BaseGeometry.__doc__
+    >>> len(b) > 1
+    True
+
+    >>> mod1 = __import__("7-base_geometry").BaseGeometry.area.__doc__
+    >>> len(mod1) > 1
+    True
+
+    >>> mod2 = __import__("7-base_geometry").BaseGeometry.integer_validator.__doc__
+    >>> len(mod2) > 1
+    True
+
+    >>> b = BG()
+    >>> b.area()
+    Traceback (most recent call last):
+    ...
+    Exception: area() is not implemented
+
+    >>> b.area(1)
+    Traceback (most recent call last):
+    ...
+    TypeError: area() takes 1 positional argument but 2 were given
+
+    >>> b.integer_validator("integer", 1)
+
+    >>> b.integer_validator("integer", 0)
+    Traceback (most recent call last):
+    ...
+    ValueError: integer must be greater than 0
+
+    >>> b.integer_validator("integer", -1)
+    Traceback (most recent call last):
+    ...
+    ValueError: integer must be greater than 0
+
+    >>> b.integer_validator("a", True)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+    >>> b.integer_validator()
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+    >>> b.integer_validator("integer")
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
