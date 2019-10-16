@@ -8,10 +8,6 @@ Importing the function from the module:
         >>> BG = __import__("7-base_geometry").BaseGeometry
 
 Now use it
-    >>> a = __import__("7-base_geometry").__doc__
-    >>> len(a) > 1
-    True
-
     >>> b = __import__("7-base_geometry").BaseGeometry.__doc__
     >>> len(b) > 1
     True
