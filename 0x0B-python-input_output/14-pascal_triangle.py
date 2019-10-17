@@ -5,7 +5,6 @@ def pascal_triangle(n):
     """Prints the n-pascal triangle"""
     lista = []
     if n <= 0:
-        lista = [[]]
         return lista
     for i in range(0, n):
         lista.append([1] * (i + 1))
