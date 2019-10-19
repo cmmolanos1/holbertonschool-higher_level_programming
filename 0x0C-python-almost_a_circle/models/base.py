@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
 
+import json
+
 class Base():
     """Base class of all other classes in this project
     The goal of it is to manage id attribute in all classes
@@ -15,3 +17,16 @@ class Base():
         else:
             Base.__nb_objects += 1
             self.id = self.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """returns the JSON string representation of list_dictionaries"""
+        if not list_dictionaries or list_dictionaries is None:
+            return "[]"
+        return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """writes the JSON string representation of list_objs to a file"""
+        
+    
