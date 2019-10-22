@@ -14,7 +14,7 @@ class Square(Rectangle):
     def __str__(self):
         """Print information about the Rectangle"""
         return "[Square] (" + str(self.id) + ") " + str(self.x) \
-            + "/" + str(self.y) + " - " + str(self.size)
+            + "/" + str(self.y) + " - " + str(self.width)
 
     @property
     def size(self):
@@ -22,10 +22,10 @@ class Square(Rectangle):
         return self.width
 
     @size.setter
-    def size(self, value):
+    def size(self, size):
         """setter for size"""
-        self.width = value
-        self.height = value
+        self.width = size
+        self.height = size
 
     def update(self, *args, **kwargs):
         """Updating the class reading variable arguments"""
