@@ -1,5 +1,8 @@
 #!/usr/bin/python3
+"""
+Class Rectange
 
+"""
 
 from models.base import Base
 
