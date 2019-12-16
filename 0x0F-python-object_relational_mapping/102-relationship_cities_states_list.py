@@ -2,8 +2,8 @@
 """ Start link class to table in database """
 
 import sys
-from model_state import Base, State
-from model_city import City
+from relationship_state import Base, State
+from relationship_city import City
 
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
@@ -17,9 +17,6 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    st = State(name="California")
-    ct = City(name="San Francisco")
-    st.cities.append(ct)
-    session.add(st)
-
-    session.close()
+    var = session.query(City)
+    for elem in var:
+        print("{}: {} -> {}".format(elem.id, elem.name, elem.state.name))
