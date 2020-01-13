@@ -9,8 +9,9 @@ import sys
 
 if __name__ == "__main__":
     # Get the info requesting the api
-    url = ' https://swapi.co/api/people/?search={}'.format(sys.argv[1])
-    r = requests.get(url)
+    url = 'https://swapi.co/api/people'
+    params = (('search', sys.argv[1]),)
+    r = requests.get(url, params=params)
 
     # Convert to json
     res = r.json()
