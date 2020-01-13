@@ -11,11 +11,10 @@ if __name__ == "__main__":
     repo = sys.argv[1]
     owner = sys.argv[2]
     url = 'https://api.github.com/repos/{}/{}/commits'.format(owner, repo)
-    response = requests.get(url)
+    response = requests.get(url).json()
 
-    rdir = response.json()
-
-    for i in range(0, 10):
-        sha = rdir[i]['sha']
-        author = rdir[i]['commit']['author']['name']
+    commits = response[:10]
+    for commit in commits:
+        sha = commit['sha']
+        author = commit['commit']['author']['name']
         print("{}: {}".format(sha, author))
