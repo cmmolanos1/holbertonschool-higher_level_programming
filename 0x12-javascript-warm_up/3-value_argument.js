@@ -1,8 +1,8 @@
 #!/usr/bin/node
 // Print message
 
-if (process.argv[2]) {
-    console.log(process.argv[2]);
+if (typeof process.argv[2] === 'undefined') {
+  console.log('No argument');
 } else {
-    console.log('No argument');
+  console.log(process.argv[2]);
 }
