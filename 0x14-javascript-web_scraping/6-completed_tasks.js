@@ -16,6 +16,7 @@ request(url, function (error, response, body) {
         }
       }
     }
-    console.log(JSON.stringify(completed));
+    //    console.log(JSON.stringify(completed));
+    console.log(completed);
   }
 });
