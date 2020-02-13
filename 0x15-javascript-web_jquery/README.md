@@ -40,7 +40,7 @@ Please test with this HTML file in your browser:
   </body>
 </html>
 ```
-###1-scripts.js
+### 1-scripts.js
 Write a Javascript script that updates the text color of the HTML tag HEADER to red (#FF0000):
 
  *  You can’t use document.querySelector to select the HTML tag
